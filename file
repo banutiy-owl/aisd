@@ -1,0 +1,27 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_classification
+import warnings
+
+
+dane0 = pd.read_csv("323609.csv")
+dane0.info
+
+
+dane1=dane0.dropna()
+obiektów - dane1.shape[0]
+atrybutów - dane1.shape[1]
+k1 = dane1.iloc[:, -1]
+klas - k1.unique().shape[0]
+for i in list(k1.unique())
+      obiektów w klasie i len(dane1[dane1['klasa']==i])
+braków - dane1.isnull().sum().sum()
+
+sns.pairplot(dane1, kind ="scatter", hue="klasa")
+
+
+kor = dane.corr()
+plt.figure(figsize=(3,4), dpi=100)
+sns.heatmap(annot = kor)
